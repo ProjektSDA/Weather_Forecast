@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block site_title %} Weather forecast {% endblock %}</title>
+    <link href="{% static 'show_weather/style/main.css' %}"  rel="stylesheet" type="text/css" >
+    {% block extra_css %} {% endblock %}
+</head>
+<body>
+<div id="main_holder">
+    <div id="header"><h1> Weather report project</h1> </div>
+    <div id="main_section">
+         <div id="menu"> {% include 'show_weather/menu.html' %} </div>
+         <div id="content"> {% block content %} Ta sekcja nie ma treści {% endblock %}</div>
+         <div style="clear:both;"></div>
+    </div>
+    <div id="footer"> (c) 2022 - Weather report crew </div>
+    </div>
+
+</div>
+
+</body>
+</html>
